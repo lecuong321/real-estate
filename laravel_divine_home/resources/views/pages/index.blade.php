@@ -18,7 +18,7 @@
          @foreach($propertieslist as $i => $property)
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="property-container">
-              <div class="property-image">
+              <div class="property-image" onclick="window.open('{{URL::to('properties/'.$property->property_slug)}}')">
                  
                 <img src="{{ URL::asset('upload/properties/'.$property->featured_image.'-s.jpg') }}" alt="{{ $property->property_name }}">
                 <div class="property-price">
